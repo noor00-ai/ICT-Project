@@ -1,0 +1,414 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* style for all the pages */
+.main{
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)80%,rgba(2, 1, 1, 0.5)50%), url(mountain-6086083_1280.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+/* to style the nevigation bar */
+.navbar{
+    background-color: #3d3932;
+    width: 1000px;
+    height: 60px;
+    margin: auto;
+    height:px;
+    width: 100%;
+}
+.footer {
+    text-align: left;
+    padding: 20px;
+    background-color: #f07b07;
+}
+/* styling new arrival */
+.new{
+    position: absolute;
+    right: 15%; 
+    top: 36%;
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #e9910d;
+    text-align:right;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: normal;
+
+}
+/* styling shopnoe button under new arrivals */
+.shop-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #e9910d;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    align-self: center;
+}
+/* change colour of shop now button when pressed */
+.shop-button:hover {
+    background-color: #ee3902;
+}
+/* to style pathfinder logo */
+.logo{
+    color: #e9910d;
+    font-size: 35px;
+   font-family: 'Times New Roman';
+    float: left;
+    padding-top: 15px;
+    padding-left: 2%;
+}
+
+.menu{
+    width: 400px;
+    float: left;
+    height: 70px;
+}
+
+ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li{
+    list-style: none;
+    margin-left: 62px;
+    margin-top: 27px;
+    font-size: 14px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial;
+    font-weight: bold;
+}
+/* to style the text on main page */
+.content{
+    color: #f0efeb;
+    font-family: 'Times New Roman';
+    font-size: 20px;
+    padding-left: 40px;
+    letter-spacing: 2px;
+}
+/* to style the text on main page */
+.content h1{
+    color: #e9910d;
+    font-family: 'Times New Roman';
+    font-size: 60px;
+    padding-left: 0px;
+    margin-top: 12%;
+    letter-spacing: 2px;
+}
+/* styling for the search box */
+.search{
+    width: 400px;
+    float: right;
+    margin-left: 100px;
+}
+.srch{
+    font-family: 'Times New Roman';
+    width: 200px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid #e9910d;
+    margin-top: 13px;
+    color: #fff;
+    font-size: 16px;
+    float: left;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+/* styling for the search box */
+.btn{
+    width: 100px;
+    height: 40px;
+    /* style background of search button */
+    background: #e9910d;   
+    /* style borders of search button */
+    border: 2px solid #e9910d;
+    margin-top: 13px;
+    /* style colour of search tetx */
+    color: #fff;
+    font-size: 15px;
+    border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    
+}
+/* style shop now page */
+.shop-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+
+h1 {
+    font-size: 36px;
+    color: #e9910d;
+    margin-bottom: 20px;
+}
+/* in which manner the idems should be displayed */
+.product-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-card {
+    width: 250px;
+    background-color: #fff;
+    border: 3px solid #e9910d;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* style the image */
+.product-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+/* style text under the images */
+.product-card h3 {
+    font-size: 22px;
+    color: #333;
+    margin-top: 10px;
+}
+/* elements inside the container */
+.product-card p {
+    font-size: 18px;
+    color: #e9910d;
+    margin: 10px 0;
+}
+/* style view button under the images */
+.VIEW{
+    padding: 10px 20px;
+    background-color: #e9910d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.VIEW:hover {
+    background-color: #ff3802;
+}
+
+
+
+/* styling about about us page */
+.about-container {
+    background-color: #4b4b44;
+    padding: 20px;
+    width: 98%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)80%,rgba(2, 1, 1, 0.5)50%), url(mountain-6086083_1280.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    text-align: center;
+}
+
+.about-container h1 {
+    font-size: 36px;
+    color: #e9910d;
+    margin-bottom: 20px;
+}
+
+.about-container h2 {
+    font-size: 28px;
+    color: #e4b20c;
+    margin-top: 20px;
+}
+
+.about-container p {
+    font-size: 18px;
+    color: #f4eded;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* style contact us page */
+.contact-container {
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)80%,rgba(2, 1, 1, 0.5)50%), url(mountain-6086083_1280.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-container h1 {
+    font-size: 36px;
+    color: #e9910d;
+    margin-bottom: 20px;
+}
+
+.contact-container h2 {
+    font-size: 28px;
+    color: #e88e08;
+    margin-top: 20px;
+}
+
+.contact-container p {
+    font-size: 18px;
+    color: #f4eded;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.icons div {
+    margin: 0 20px; 
+}
+/* Individual Icon Colors */
+.icons .facebook i {
+    color: #3b5998; 
+}
+
+.icons .instagram i {
+    color: #e4405f; 
+}
+
+.icons .youtube i {
+    color: #ff0000; 
+}
+
+.icons .twitter i {
+    color: #1da1f2; 
+}
+/* size changes when clicked */
+.icons i:hover {
+    transform: scale(1.8); 
+}
+
+
+/* styling for products page */
+.product-Container{
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+    color: #f5a60a;
+    display: block;
+    margin: 0px;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)80%,rgba(2, 1, 1, 0.5)50%), url(mountain-6086083_1280.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.product-Container h3{
+    align-items: center;
+    display: grid;
+    padding-right: 70%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.productimage{
+    align-items: center;
+    display: grid;
+    padding-top: 2%;
+}
+
+
+/* styling for login page */
+
+.login-container {
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)80%,rgba(2, 1, 1, 0.5)50%), url(mountain-6086083_1280.jpg);
+    background-position: center;
+    background-size: cover;
+    height:100vh;
+    padding-left:35%;
+    padding-top: 8%;
+    justify-content: center;
+    align-items: center;
+}
+/* style login box */
+.login-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 8px;
+    outline: auto;
+    outline-color: #d6890c;
+    width: 100%;
+    max-width: 400px;
+}
+h2 {
+    
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size:35px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    color: #555;
+}
+
+.input-group input {
+    font-size:35px;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+/* chnages colour of the box when you click on it to write something */
+.input-group input:focus {
+    outline: none;
+    border-color: #f52b08;
+}
+/* style login button */
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #f4c005;
+    color: #fff;
+    font-size: 16px;
+    border: #181616;
+    border-radius: 6px;
+    cursor: pointer;
+}
+/* change colour of login button when clicked */
+.login-btn:hover {
+    background-color: #df220d;
+}
+.links {
+    text-align: center;
+    margin-top: 20px;
+}
+.links a {
+    color: #fa2612;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* style for error messages*/
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+}
