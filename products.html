@@ -3,38 +3,257 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>product-pathfinder</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Products - Pathfinder</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-orange: #FFA500;
+        }
+        
+        body {
+            background-color: #1a1a1a;
+            color: white;
+            padding-top: 76px;
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 1rem;
+        }
+
+        .navbar-brand {
+            color: var(--primary-orange);
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .nav-link {
+            color: white !important;
+            margin: 0 1rem;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-orange) !important;
+        }
+
+        .product-header {
+            background-image: url('https://source.unsplash.com/1600x400/?outdoor,gear');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            position: relative;
+            margin-bottom: 3rem;
+        }
+
+        .header-overlay {
+            background: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .category-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            transition: transform 0.3s;
+        }
+
+        .category-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .category-image {
+            position: relative;
+            overflow: hidden;
+            height: 300px;
+        }
+
+        .category-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .category-card:hover .category-image img {
+            transform: scale(1.1);
+        }
+
+        .category-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .category-title {
+            color: var(--primary-orange);
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .filter-section {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
+        .filter-btn {
+            background: transparent;
+            border: 1px solid var(--primary-orange);
+            color: white;
+            margin: 0.5rem;
+            transition: all 0.3s;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--primary-orange);
+            color: white;
+        }
+
+        .footer {
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 3rem 0;
+            margin-top: 4rem;
+        }
+    </style>
 </head>
 <body>
-    <div class="navbar">
-        <div class="icon">
-            <h2 class="logo">Pathfinder</h2>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Pathfinder</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">AboutUs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="menu">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="about.html">AboutUs</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </div>
-    
-    <div class="product-Container">
-        <div class="productimage">
-            <img src="jacket.jpg" alt="Product Image"width="300">
-            <h3>JACKETS</h3>
-            <img src="shoes.jpg" alt="Product Image"width="300">
-            <h3>SHOES</h3>
-            <img src="camp.jpg" alt="Product Image"width="300">
-            <h3>CAMP</h3>
-            <img src="helmets.jpg" alt="Product Image"width="300">
-            <h3>HELMET</h3>
-            <img src="bags.jpg" alt="Product Image"width="300">
-            <h3>BAGS</h3>
+    </nav>
+
+    <div class="product-header">
+        <div class="header-overlay">
+            <h1 class="text-center" style="color: var(--primary-orange); font-size: 3.5rem;">Our Products</h1>
         </div>
     </div>
+
+    <div class="container">
+        <div class="filter-section">
+            <div class="text-center">
+                <button class="btn filter-btn active">All</button>
+                <button class="btn filter-btn">Jackets</button>
+                <button class="btn filter-btn">Shoes</button>
+                <button class="btn filter-btn">Camp Gear</button>
+                <button class="btn filter-btn">Helmets</button>
+                <button class="btn filter-btn">Bags</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://media.cntraveler.com/photos/66f2dd941faee5afb18db21f/3:2/w_2952,h_1968,c_limit/Fleece%20Jackets-2024_00-Lede.jpg" alt="Jackets">
+                        <div class="category-overlay">
+                            <h3 class="category-title">Jackets</h3>
+                            <p class="mb-0">Premium outdoor jackets</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://www.salewa.com/media/image/5e/23/1b/expert-top-banner-hiking-boots-mob-2022_800x800.jpg" alt="Shoes">
+                        <div class="category-overlay">
+                            <h3 class="category-title">Shoes</h3>
+                            <p class="mb-0">Professional hiking shoes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y2FtcHxlbnwwfHwwfHx8MA%3D%3D" alt="Camp Gear">
+                        <div class="category-overlay">
+                            <h3 class="category-title">Camp</h3>
+                            <p class="mb-0">Essential camping equipment</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://followbrand.com/cdn/shop/files/1440x1800-36copy.webp?crop=center&height=1200&v=1699586029&width=1200" alt="Helmets">
+                        <div class="category-overlay">
+                            <h3 class="category-title">Helmets</h3>
+                            <p class="mb-0">Safety first helmets</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://konfor.pk/cdn/shop/files/17_beeeb9a3-8761-455b-b227-a4dbf48efe6d.jpg?v=1699964252&width=1000" alt="Bags">
+                        <div class="category-overlay">
+                            <h3 class="category-title">Bags</h3>
+                            <p class="mb-0">Durable adventure bags</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>About Pathfinder</h4>
+                    <p>Your trusted partner in outdoor adventures since 2020</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-white">About Us</a></li>
+                        <li><a href="products.html" class="text-white">Products</a></li>
+                        <li><a href="contact.html" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Connect With Us</h4>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

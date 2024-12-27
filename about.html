@@ -4,33 +4,337 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Pathfinder</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-orange: #FFA500;
+        }
+        
+        body {
+            background-color: #1a1a1a;
+            color: white;
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 1rem;
+        }
+
+        .navbar-brand {
+            color: var(--primary-orange);
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .nav-link {
+            color: white !important;
+            margin: 0 1rem;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-orange) !important;
+        }
+
+        .about-hero {
+            background-image: url('https://source.unsplash.com/1600x900/?adventure,mountains');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            position: relative;
+        }
+
+        .hero-overlay {
+            background: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            color: var(--primary-orange);
+            text-align: center;
+        }
+
+        .about-section {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 4rem 0;
+            margin: 2rem 0;
+            border-radius: 15px;
+        }
+
+        .value-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 1rem 0;
+            transition: transform 0.3s;
+            height: 100%;
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 2rem;
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stat-card:last-child {
+            border-right: none;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            color: var(--primary-orange);
+            font-weight: bold;
+        }
+
+        .team-member {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+
+        .footer {
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 3rem 0;
+            margin-top: 4rem;
+        }
+        
+
+
+
+
+        .team-member {
+            transition: all 0.3s ease;
+            background: rgba(45, 45, 45, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(255, 140, 0, 0.2);
+        }
+        
+        .team-member img {
+            border: 4px solid #ff8c00;
+            transition: all 0.3s ease;
+        }
+        
+        .team-member:hover img {
+            transform: scale(1.05);
+        }
+        
+        .role-badge {
+            background: rgba(255, 140, 0, 0.1);
+            color: #ff8c00;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        
+        .section-title {
+            color: #ff8c00;
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        
+        .social-links a {
+            color: #ff8c00;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: #ffa500;
+        }
+
+
+
+
+
+
+    </style>
 </head>
 <body>
-    <div class="navbar">
-        <div class="icon">
-            <h2 class="logo">Pathfinder</h2>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Pathfinder</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">AboutUs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="menu">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="about.html">AboutUs</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+    </nav>
+
+    <section class="about-hero">
+        <div class="hero-overlay">
+            <h1 class="hero-title">Our Story</h1>
         </div>
+    </section>
+
+    <div class="container mt-5">
+        <div class="about-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <h2 class="mb-4" style="color: var(--primary-orange)">About Pathfinder</h2>
+                        <p class="lead">Pathfinder is your ultimate companion for adventure, offering a wide range of high-quality, durable products for all your outdoor and travel needs. Whether you're hiking through rugged mountains or exploring new cities, we provide the gear you need to make every journey memorable.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <div class="value-card">
+                    <h3 style="color: var(--primary-orange)">Our Mission</h3>
+                    <p>Our mission is to inspire and equip adventurers, travelers, and explorers by providing top-notch gear and apparel that enhances their experience. We believe in adventure, exploration, and living life to the fullest.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="value-card">
+                    <h3 style="color: var(--primary-orange)">Our Vision</h3>
+                    <p>To become a leading brand known for innovation, durability, and quality, making every adventure better and more enjoyable for our customers.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <div class="stat-number">5K+</div>
+                    <div>Happy Customers</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <div class="stat-number">500+</div>
+                    <div>Products</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <div class="stat-number">50+</div>
+                    <div>Countries Served</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <div class="stat-number">24/7</div>
+                    <div>Support</div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="text-center mt-5 mb-4" style="color: var(--primary-orange)">Our Team</h2>
+        <div class="container py-5">
+            <h2 class="section-title mb-5">Our Team</h2>
+            <div class="row justify-content-center g-4">
+                <!-- First Team Member -->
+                <div class="col-xl-4 col-lg-5 col-md-6">
+                    <div class="team-member text-center p-4 h-100">
+                        <div class="position-relative mb-4">
+                            <img src="https://images.ctfassets.net/h6goo9gw1hh6/2sNZtFAWOdP1lmQ33VwRN3/24e953b920a9cd0ff2e1d587742a2472/1-intro-photo-final.jpg?w=1200&h=992&fl=progressive&q=70&fm=jpg" alt="Mahad" 
+                                 class="img-fluid rounded-circle shadow-sm" 
+                                 style="width: 150px; height: 150px; object-fit: cover;">
+                        </div>
+                        <h4 class="fw-bold mb-2 text-white">Mahad</h4>
+                        <div class="role-badge mb-3">
+                            Founder & CEO
+                        </div>
+                        <p class="text-light mb-3">
+                            Leading our vision and strategy
+                        </p>
+                        <div class="social-links">
+                            <a href="#" class="text-decoration-none"><i class="bi bi-linkedin"></i></a>
+                            <a href="#" class="text-decoration-none"><i class="bi bi-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Second Team Member -->
+                <div class="col-xl-4 col-lg-5 col-md-6">
+                    <div class="team-member text-center p-4 h-100">
+                        <div class="position-relative mb-4">
+                            <img src="https://images.unsplash.com/photo-1619895862022-09114b41f16f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d29tZW4lMjBwcm9maWxlJTIwcGljdHVyZXxlbnwwfHwwfHx8MA%3D%3D" alt="Noor ul Ain" 
+                                 class="img-fluid rounded-circle shadow-sm" 
+                                 style="width: 150px; height: 150px; object-fit: cover;">
+                        </div>
+                        <h4 class="fw-bold mb-2 text-white">Noor ul Ain</h4>
+                        <div class="role-badge mb-3">
+                            Product Director
+                        </div>
+                        <p class="text-light mb-3">
+                            Driving product innovation
+                        </p>
+                        <div class="social-links">
+                            <a href="#" class="text-decoration-none"><i class="bi bi-linkedin"></i></a>
+                            <a href="#" class="text-decoration-none"><i class="bi bi-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
     </div>
 
-    <div class="about-container">
-        <h1>About Pathfinder</h1>
-        <p>Pathfinder is your ultimate companion for adventure, offering a wide range of high-quality, durable products for all your outdoor and travel needs. Whether you're hiking through rugged mountains or exploring new cities, we provide the gear you need to make every journey memorable. Our products are designed to withstand the challenges of every environment, ensuring you're always prepared for whatever comes your way.</p>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>About Pathfinder</h4>
+                    <p>Your trusted partner in outdoor adventures since 2020</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-white">About Us</a></li>
+                        <li><a href="products.html" class="text-white">Products</a></li>
+                        <li><a href="contact.html" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Connect With Us</h4>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-        <h2>Our Mission</h2>
-        <p>Our mission is to inspire and equip adventurers, travelers, and explorers by providing top-notch gear and apparel that enhances their experience. We believe in adventure, exploration, and living life to the fullest, no matter where your journey takes you.</p>
-
-        <h2>Our Vision</h2>
-        <p>To become a leading brand known for innovation, durability, and quality, making every adventure better and more enjoyable for our customers.</p>
-    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

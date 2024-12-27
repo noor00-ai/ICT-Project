@@ -3,57 +3,270 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contact-pathfinder</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+    <title>Contact - Pathfinder</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-orange: #FFA500;
+        }
+        
+        body {
+            background-color: #1a1a1a;
+            color: white;
+            padding-top: 76px;
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 1rem;
+        }
+
+        .navbar-brand {
+            color: var(--primary-orange);
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .nav-link {
+            color: white !important;
+            margin: 0 1rem;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-orange) !important;
+        }
+
+        .contact-header {
+            background-image: url('https://source.unsplash.com/1600x400/?mountains,landscape');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            position: relative;
+            margin-bottom: 3rem;
+        }
+
+        .header-overlay {
+            background: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: transform 0.3s;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            color: var(--primary-orange);
+            margin-bottom: 1rem;
+        }
+
+        .contact-form {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+        }
+
+        .form-control {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        .form-control:focus {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border-color: var(--primary-orange);
+            box-shadow: 0 0 0 0.2rem rgba(255, 165, 0, 0.25);
+        }
+
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .submit-btn {
+            background-color: var(--primary-orange);
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            transition: transform 0.3s;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            background-color: #e69500;
+        }
+
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.1);
+            margin: 0 10px;
+            transition: all 0.3s;
+        }
+
+        .social-icon:hover {
+            background: var(--primary-orange);
+            transform: translateY(-5px);
+        }
+
+        .map-container {
+            height: 300px;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .footer {
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 3rem 0;
+            margin-top: 4rem;
+        }
+    </style>
 </head>
 <body>
-    <div class="navbar">
-        <div class="icon">
-            <h2 class="logo">Pathfinder</h2>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Pathfinder</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">AboutUs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="menu">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="about.html">AboutUs</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+    </nav>
+
+    <div class="contact-header">
+        <div class="header-overlay">
+            <h1 class="text-center" style="color: var(--primary-orange); font-size: 3.5rem;">Contact Us</h1>
         </div>
     </div>
-    <div class="contact-container">
-        <h1>Contact Us</h1>
-        <p>If you have any questions, feedback, or inquiries, feel free to reach out to us using the following contact information:</p>
 
-        <h2>Our Address</h2>
-        <p>123 Adventure St, Mountain City, 98229</p>
-
-        <h2>Phone Number</h2>
-        <p>+93 3360618945</p>
-
-        <h2>Email</h2>
-        <p>support@pathfinder.com</p>
-
-        <h2>Follow Us</h2>
-        <p>Stay connected with us on social media:</p>
-        <div class="icons">
-            <div class="facebook">
-                <i class="fa fa-facebook"></i>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="contact-card text-center">
+                    <i class="fas fa-map-marker-alt contact-icon"></i>
+                    <h3>Our Address</h3>
+                    <p>Air University, Islamabad</p>
+                </div>
             </div>
-            <div class="instagram">
-                <i class="fa fa-instagram" aria-hidden="true"></i>
+            <div class="col-md-4">
+                <div class="contact-card text-center">
+                    <i class="fas fa-phone contact-icon"></i>
+                    <h3>Phone Number</h3>
+                    <p>+93 3360618945</p>
+                </div>
             </div>
-            <div class="youtube">
-                <i class="fa fa-youtube-square" aria-hidden="true"></i>
-            </div>
-            <div class="twitter">
-                <i class="fa fa-twitter-square" aria-hidden="true"></i>
+            <div class="col-md-4">
+                <div class="contact-card text-center">
+                    <i class="fas fa-envelope contact-icon"></i>
+                    <h3>Email</h3>
+                    <p>support@pathfinder.com</p>
+                </div>
             </div>
         </div>
-        
+
+        <div class="row mt-5">
+            <div class="col-lg-6">
+                <div class="contact-form">
+                    <h2 class="mb-4" style="color: var(--primary-orange)">Send us a Message</h2>
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Your Name">
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Subject">
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3318.81110508803!2d73.0220790747983!3d33.7138364355249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfbe5967d48243%3A0xcb2c90c562c4687e!2sAir%20University%20Islamabad!5e0!3m2!1sen!2s!4v1735228483722!5m2!1sen!2s" style="width: 100%; height: 100%; object-fit: cover;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="mt-4">
+                    <h3 style="color: var(--primary-orange)">Follow Us</h3>
+                    <div class="d-flex justify-content-start mt-3">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook-f text-white"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-instagram text-white"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-youtube text-white"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-twitter text-white"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>About Pathfinder</h4>
+                    <p>Your trusted partner in outdoor adventures since 2020</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-white">About Us</a></li>
+                        <li><a href="products.html" class="text-white">Products</a></li>
+                        <li><a href="contact.html" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Connect With Us</h4>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
